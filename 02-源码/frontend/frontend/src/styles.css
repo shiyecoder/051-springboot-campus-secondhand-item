@@ -1,0 +1,81 @@
+/* 全局样式：色值与 design/design-system.md 一致（文化绛红） */
+:root {
+  --p: #5b2533;
+  --p2: #4a1d2a;
+  --a: #2f6f6a;
+  --bg: #faf7f5;
+  --ink: #241a1d;
+  --ink2: #6b5e62;
+  --line: #e7dfdc;
+  --acc: #7a3947;
+  --ok: #2d765c;
+  --bad: #a61b29;
+  --warn: #b4761e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.num { font-variant-numeric: tabular-nums; }
+.mono { font-family: 'SF Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: var(--p); font-weight: 600; }
+
+.page-h { display: flex; align-items: flex-end; gap: 12px; margin-bottom: 16px; }
+.page-h h2 { font-size: 19px; font-weight: 600; margin: 0; letter-spacing: .3px; }
+.page-h p { margin: 4px 0 0; color: var(--ink2); font-size: 12px; }
+.page-h .sp { flex: 1; }
+
+.card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+.card-h { display: flex; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+.card-h h3 { font-size: 14px; font-weight: 600; margin: 0; }
+.card-h .sp { flex: 1; }
+
+.filter { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin-bottom: 14px; }
+.filter .fi { display: flex; align-items: center; gap: 7px; }
+.filter .fi label { color: var(--ink2); font-size: 12px; white-space: nowrap; }
+.filter .sp { flex: 1; }
+
+.pager { display: flex; align-items: center; gap: 10px; justify-content: flex-end; padding-top: 14px; color: var(--ink2); font-size: 12px; }
+
+.tag { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 4px; font-size: 11.5px; border: 1px solid; white-space: nowrap; }
+.tag.ok { color: var(--ok); border-color: #bfdccf; background: #f1f8f4; }
+.tag.run { color: var(--a); border-color: #bfd8d5; background: #f1f7f6; }
+.tag.warn { color: var(--warn); border-color: #e8d3ae; background: #fcf6ea; }
+.tag.bad { color: var(--bad); border-color: #e4c4c7; background: #fbf1f2; }
+.tag.gray { color: var(--ink2); border-color: var(--line); background: #f7f4f2; }
+
+.thumb { width: 52px; height: 38px; border-radius: 4px; object-fit: cover; border: 1px solid var(--line); background: #efe7e4; }
+.mut { color: var(--ink2); }
+.note { background: #fbf7f5; border-left: 3px solid var(--acc); padding: 10px 12px; font-size: 12px; color: var(--ink2); border-radius: 0 5px 5px 0; }
+
+.kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 14px; }
+.kpi { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 13px 14px; }
+.kpi span { color: var(--ink2); font-size: 11.5px; display: block; margin-bottom: 6px; }
+.kpi b { font-size: 22px; font-weight: 600; letter-spacing: -.5px; color: var(--p); font-variant-numeric: tabular-nums; }
+.kpi em { font-style: normal; font-size: 11px; color: var(--ink2); margin-left: 5px; }
+.kpi em.up { color: var(--ok); }
+.kpi em.dn { color: var(--bad); }
+
+.grid2 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+/* Element Plus 主题微调：主色对齐设计系统 */
+:root {
+  --el-color-primary: #5b2533;
+  --el-color-success: #2d765c;
+  --el-color-warning: #b4761e;
+  --el-color-danger: #a61b29;
+  --el-border-radius-base: 5px;
+}
+.el-button--primary { --el-button-bg-color: #5b2533; --el-button-border-color: #5b2533; --el-button-hover-bg-color: #4a1d2a; --el-button-hover-border-color: #4a1d2a; }
+.el-table th.el-table__cell { background: #fbf7f5 !important; color: var(--ink2); font-weight: 600; font-size: 12px; }
+.el-table .el-table__cell { padding: 9px 0; }
+.el-drawer__header { margin-bottom: 12px; font-weight: 600; }
